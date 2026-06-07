@@ -1,0 +1,4 @@
+# NestJS OpenAI Backend
+nestjs-openai-backend/dist/
+nestjs-openai-backend/node_modules/
+nestjs-openai-backend/.env
