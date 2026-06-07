@@ -10,7 +10,10 @@ export class OpenaiService {
     async get_responses(prompt: string) {
         const response = await this.openaiClient.responses.create({
             model: 'gpt-4o-mini',
-            input: [{ "role": "user", "content": prompt }],
+            input: [
+                { "role": "system", "content": "Eres un asistente que respondera las preguntas brevemente de forma clara y concisa" },
+                { "role": "user", "content": prompt }
+            ],
             max_output_tokens: 100
         })
 
